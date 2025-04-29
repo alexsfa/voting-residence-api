@@ -3,10 +3,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                if (isUnix()) {
-                    sh 'echo "Build completed"'
-                } else {
-                    bat 'echo "Build completed"'
+                script { 
+                    if (isUnix()) {
+                        sh 'echo "Build completed"'
+                    } else {
+                        bat 'echo "Build completed"'
+                    }
                 }
             }
         }
