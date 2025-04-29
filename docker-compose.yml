@@ -13,4 +13,4 @@ services:
     command: >
       sh -c "python manage.py runserver 0.0.0.0:8000"
 
-23r32r
+23r32rwefdewf
