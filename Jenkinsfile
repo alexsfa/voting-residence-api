@@ -3,15 +3,16 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                script { 
+                script {
                     if (isUnix()) {
-                        sh 'echo "Build completed"'
+                        sh 'docker-compose build'
                     } else {
-                        bat 'echo "Build completed"'
+                        bat 'docker-compose build'
                     }
                 }
-            }
+            }    
         }
     }
 }
+
 
